@@ -2,16 +2,15 @@
 let r = document.querySelector(':root');
 btn = document.querySelector('.theme');
 
-
 function myFunction_set(oldVar, newVar) {
     r.style.setProperty(oldVar, newVar);
 }
-
 
 function mode() {
     if (darkMode) {
         btn.innerHTML = "🌙";
         darkMode = false;
+        // Colors for light mode
         myFunction_set('--color-text', '#50256b');
         myFunction_set('--color-bg', '#f1b5ff');
         myFunction_set('--color-bg-light', '#eee0f1');
@@ -21,6 +20,7 @@ function mode() {
     } else {
         btn.innerHTML = "☀️";
         darkMode = true;
+        // Colors for dark mode
         myFunction_set('--color-text', '#f1b5ff');
         myFunction_set('--color-bg', '#1a0a24');
         myFunction_set('--color-bg-light', '#7c378b1e');
@@ -28,7 +28,6 @@ function mode() {
         myFunction_set('--color-selection-text', '#bd83ff');
         myFunction_set('--color-selection-bg', '#55315e');
     }
-
 }
 
 darkMode = true;
